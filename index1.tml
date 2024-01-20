@@ -1,0 +1,66 @@
+{ gamelist :[{ Id :36, Id_Game :6, GameName : Word Bandit  , Attempts_Allowed :20, ID_ORGANIZATION :15, IsActive : A , Open_To_Play :1, Updated_Date_Time : \/Date(1705559267000)\/ , GameType : 1 , UpdatedFlag :175, completePer : 100 , RectangleImgURL : https://www.playtolearn.in/NGageCMS/Images/Cards/6Rectangle_36.png , RoundedImgURL : https://www.playtolearn.in/NGageCMS/Images/Cards/Rounded/6game(1)Rounded_36.png , complete_score :0, BackgroundImgURL : https://www.playtolearn.in/NGageCMS/Images/gamebackgroundimages/6Background_36.png , Level1ImgURl :null, Level2ImgURl :null, Sequence :1, Id_CmsUser :21}], anagramlist :[], monstercatchlist :[], truckgamelist :[], quizelist :[{ Id_Quiz :176, Id_Game :6, Correct_point :10, Wrong_point :0, Question : आपको ग्राहकों के साथ गर्मजोशी से क्या व्यवहार करना चाहिए? , Correct_Options : अभिवादन करना , Options_1 : विदा करना  , Options_2 :  परिचय देना   , Options_3 : काम , IsActive : A , Updated_Date_Time : \/Date(1704437372000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :168, Id_Game :6, Correct_point :10, Wrong_point :0, Question : कॉल का उत्तर …… रिंग में दें? , Correct_Options : पहला  , Options_1 : दूसरा , Options_2 : तीसरा , Options_3 : चौथी , IsActive : A , Updated_Date_Time : \/Date(1704357784000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :172, Id_Game :6, Correct_point :10, Wrong_point :0, Question : निम्नलिखित में से कौन सा विकल्प ग्राहक सेवा का गुण नहीं है? , Correct_Options : अभ्यास , Options_1 : व्यावसायिकता , Options_2 : धैर्य , Options_3 : पहले लोग , IsActive : A , Updated_Date_Time : \/Date(1704358935000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :174, Id_Game :6, Correct_point :10, Wrong_point :0, Question : …….. शारीरिक मुद्रा बनाए रखें  , Correct_Options : सीधा एवं ईमानदार  , Options_1 : झुकना , Options_2 : क्रॉस लेग्ड , Options_3 : क्रॉस- सशस्त्र , IsActive : A , Updated_Date_Time : \/Date(1704359053000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :180, Id_Game :6, Correct_point :10, Wrong_point :0, Question : बबलगमर जूते के क्या फायदे हैं? , Correct_Options : अच्छा संतुलन और स्थिरता , Options_1 : Memory Foam , Options_2 : High एड़ी के जूते  , Options_3 : इनमे से कोई भी नहीं , IsActive : A , Updated_Date_Time : \/Date(1705558817000)\/ , ID_ORGANIZATION :15, Id_quiztype :18, Id_CmsUser :null},{ Id_Quiz :173, Id_Game :6, Correct_point :10, Wrong_point :0, Question : यदि ग्राहक आप पर क्रोधित हो जाए तो क्या आप आक्रामक हो सकते हैं? , Correct_Options : नहीं , Options_1 : हाँ , Options_2 : शायद , Options_3 : कदापि नहीं , IsActive : A , Updated_Date_Time : \/Date(1704370689000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :178, Id_Game :6, Correct_point :10, Wrong_point :0, Question : बीबीजी शूज़ की USPs क्या हैं?  , Correct_Options : ऊपर के सभी , Options_1 : आरामदायक , Options_2 : सुरक्षित , Options_3 : रंगीन और जीवंत रंग , IsActive : A , Updated_Date_Time : \/Date(1705559267000)\/ , ID_ORGANIZATION :15, Id_quiztype :18, Id_CmsUser :null},{ Id_Quiz :170, Id_Game :6, Correct_point :10, Wrong_point :0, Question : ……… इंप्रेशन Last इंप्रेशन है? , Correct_Options : पहला  , Options_1 : दूसरा , Options_2 : Last , Options_3 : तीसरा , IsActive : A , Updated_Date_Time : \/Date(1704358798000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :175, Id_Game :6, Correct_point :10, Wrong_point :0, Question : सुपर में P का मतलब क्या है? , Correct_Options : 3 विकल्प प्रस्तुत करें , Options_1 : उपहार प्रस्तुत करें , Options_2 : प्रस्तुत है एनएफटी , Options_3 : ग्राहक का अभिनंदन , IsActive : A , Updated_Date_Time : \/Date(1704453640000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null},{ Id_Quiz :169, Id_Game :6, Correct_point :10, Wrong_point :0, Question : ग्राहक जो शिकायत करते हैं: , Correct_Options : व्यवसाय या संगठनात्मक मुद्दों की पहचान करने में आपकी सहायता करें , Options_1 : दुखी बचपन था , Options_2 : स्वभावतः क्रोधित होते हैं          , Options_3 : उनके प्राथमिक रिश्तों में परेशानी है , IsActive : A , Updated_Date_Time : \/Date(1704437412000)\/ , ID_ORGANIZATION :15, Id_quiztype :17, Id_CmsUser :null}], objectgamilist :[], truckscoretypelist :[{ ScoreId :1, ScoreType : dustbin pick up game },{ ScoreId :3, ScoreType : driving destination game }], truckdestinationdrivinglist :[], matchthetilelist :[], matchthetiletypelist :[], herelist :[], enemieslist :[], attacktoollist :[], monsterSpeedByScoreList :[], match_the_tiles_Timer :[], game_popup_msg :[]}
+
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+        #ques {
+            width: auto;
+            height: auto;
+            position: relative;
+            background: purple;
+            clip-path: none;
+            justify-content: start;
+            font-size: 20px;
+            color: white;
+            font-size: 25px;
+            padding: 20px;
+            border: 5px solid;
+            border-image: linear-gradient(red, yellow);
+            border-image-slice: 1;
+            margin-inline: -48px;
+        }
+    
+        #option-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-inline: -49px;
+            gap: 12px;
+            margin-top: 25px;
+        }
+    
+        .option {
+            width: auto;
+            height: auto;
+            position: relative;
+            background: purple;
+            clip-path: none;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            font-size: 18px;
+            color: white;
+            font-size: 25px;
+            padding: 12px;
+            border: 5px solid;
+            border-image: linear-gradient(red, yellow);
+            border-image-slice: 1;
+        }
+    
+        #quiz {
+            margin-top: 35%;
+        }
+    
+        #timer-sec {
+            left: 11rem; /* Adjust the left position for tablets */
+        }
+    
+        .logo-img {
+            top: 5px; /* Adjust the top position for tablets */
+        }
+    
+        .logo {
+            left: 32%;
+            height: 160px;
+            top: 5rem; /* Adjust the top position for tablets */
+        }
+    }
+    

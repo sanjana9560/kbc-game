@@ -1,0 +1,240 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url("bg-01.png");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+
+#quiz-box{
+    width: 100vw;
+    margin-top: 20%;
+}
+
+#ques {
+    width: 100vw;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(red, yellow);
+    clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center; /* Center the text */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden;
+    font-weight: bolder;
+    line-height: 1.4; /* Adjust line height for better readability */
+}
+
+/* Limit text to two lines */
+#ques::after {
+    content: '';
+    display: block;
+    height: 2.8em; /* You can adjust this value to control the number of lines */
+    margin-top: -2.8em; /* Negative margin to pull up the clipped text */
+    background: linear-gradient(transparent 60%, white); /* Gradient to fade out the clipped text */
+}
+
+
+
+
+#ques::before {
+    content: "";
+    width: 95vw;
+    height: 170px;
+    position: absolute;
+    /* background-color: rgb(106, 93, 250); */
+    background-color: purple;
+    clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
+    z-index: -1;
+}
+
+#option-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    /* gap: 20px; */
+}
+
+/* .option {
+    width: 50vw;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(red, yellow);
+    clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    color: white;
+    font-size: 1.5rem;
+} */
+
+.option {
+    width: 50vw;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(red, yellow);
+    clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 1.5rem;
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* .option:hover::before {
+    background-color: rgba(230, 17, 17, 0.78);
+} */
+
+
+
+.option::before {
+    content: "";
+    width: 48vw;
+    height: 170px;
+    position: absolute;
+    /* background-color: rgb(106, 93, 250); */
+    background-color: purple;
+    clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
+    z-index: -1;
+}
+
+.label {
+    z-index: 1;
+    position: relative;
+}
+.logo-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .logo-img {
+        position: absolute;
+        top: 8%;
+        background-image: url("logo2.png");
+        background-size: cover; /* Adjust as needed */
+        background-position: center; /* Adjust as needed */
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* left: 45%; */
+    }
+
+    /* #point {
+        font-size: 60px;
+        color: #fff;
+    } */
+    
+    #timer-sec {
+        font-size: 60px;
+        color: #fff;
+    }
+
+    .option.correct-answer::before {
+        background-color: green !important;
+    }
+    
+    .option.wrong-answer::before {
+        background-color: red !important;
+    }
+    
+    
+
+/* Media query for screens with a width up to 480 pixels */
+@media only screen and (max-width: 480px) {
+    #ques {
+        width: auto;
+        height: auto;
+        position: relative;
+        background: purple;
+        clip-path: none;
+        justify-content: start;
+        font-size: 20px;
+        color: white;
+        font-size: 25px;
+        padding: 25px;
+        border: 5px solid;
+        border-image: linear-gradient(red, yellow);
+        border-image-slice: 1;
+        margin-inline: 10px;
+    }
+
+    #option-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-inline: 10px;
+        gap: 12px;
+        margin-top: 3rem;
+    }
+
+
+    .option {
+        width: auto;
+        height: auto;
+        position: relative;
+        background: purple;
+        clip-path: none;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-size: 18px;
+        color: white;
+        font-size: 25px;
+        padding: 12px;
+        border: 5px solid;
+        border-image: linear-gradient(red, yellow);
+        border-image-slice: 1;
+    }
+
+    #quiz{
+        margin-top: 35%;
+    }
+    .logo-img {
+        position: absolute;
+        top: 8%;
+        background-image: url(logo2.png);
+        background-size: cover;
+        background-position: center;
+        width: 44vw;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* left: 27%; */
+    }
+    
+    #timer-sec {
+        font-size: 40px;
+        color: #fff;
+    }
+    
+    }
+
+
+
+
+    
+
