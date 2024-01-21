@@ -20,12 +20,12 @@
 
 #quiz-box{
     width: 100vw;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 #ques {
     width: 100vw;
-    height: 200px;
+    height: 280px;
     position: relative;
     background: linear-gradient(red, yellow);
     clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
@@ -55,8 +55,8 @@
 
 #ques::before {
     content: "";
-    width: 95vw;
-    height: 170px;
+    width: 97vw;
+    height: 250px;
     position: absolute;
     /* background-color: rgb(106, 93, 250); */
     background-color: purple;
@@ -86,7 +86,7 @@
 
 .option {
     width: 50vw;
-    height: 200px;
+    height: 230px;
     position: relative;
     background: linear-gradient(red, yellow);
     clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
@@ -99,7 +99,7 @@
     text-align: justify;
     white-space: nowrap;
     overflow: hidden;
-    padding: 10px;
+    padding: 30px;
 }
 
 /* .option:hover::before {
@@ -111,12 +111,14 @@
 .option::before {
     content: "";
     width: 48vw;
-    height: 170px;
+    height: 210px;
     position: absolute;
-    /* background-color: rgb(106, 93, 250); */
+    background-color: rgb(106, 93, 250);
     background-color: purple;
     clip-path: polygon(22% 18%, 80% 18%, 98% 48%, 82% 77%, 25% 78%, 4% 51%);
     z-index: -1;
+    padding: 25x;
+
 }
 
 .label {
@@ -149,8 +151,16 @@
     } */
     
     #timer-sec {
-        font-size: 60px;
+        font-size: 50px;
         color: #fff;
+        position: absolute;
+        right: 4%;
+        top: 2%;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        padding: 17px;
+        background:linear-gradient(red,yellow);
+        
     }
 
     .option.correct-answer::before {
@@ -160,11 +170,30 @@
     .option.wrong-answer::before {
         background-color: red !important;
     }
+
+    /* #timer{
+        display: flex;
+        justify-content: center;
+    }
     
+    #timer-box {
+        background-color:red;
+        color: #fff; 
+        font-size: 24px; 
+          padding: 10px; 
+        border-radius: 10px; 
+        margin-right: 10px;
+    } */
+    
+    #score{
+        font-size: 40px;
+        color: white;
+    }
     
 
 /* Media query for screens with a width up to 480 pixels */
 @media only screen and (max-width: 480px) {
+    
     #ques {
         width: auto;
         height: auto;
@@ -226,15 +255,22 @@
         /* left: 27%; */
     }
     
+
+    .option.correct-answer {
+        background-color: green !important;
+    }
+    
+    .option.wrong-answer {
+        background-color: red !important;
+    }
     #timer-sec {
-        font-size: 40px;
-        color: #fff;
+        font-size: 30px;
+        right: 5%;
+        top: 2%;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        padding: 10px;
+        
+    }    
     }
-    
-    }
-
-
-
-
-    
 

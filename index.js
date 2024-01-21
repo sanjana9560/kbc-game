@@ -106,6 +106,8 @@ let UID = [];
 ParamOrgID = 15;
 async function getDetails(url = `https://www.playtolearn.in/Wordbandit_api/api/Gamesetuplist?OrgID=${ParamOrgID}&GameID=6&UserID=bata502_BA`) {
     try {
+      console.log('Fetching data from URL:', url);
+
         const response = await fetch(url, { method: 'GET' });
 
         if (!response.ok) {
@@ -125,6 +127,7 @@ async function getDetails(url = `https://www.playtolearn.in/Wordbandit_api/api/G
         return encryptedData;
     } catch (error) {
         console.error('Fetch error:', error.message);
+        
         throw error;
     }
 }
@@ -169,10 +172,7 @@ let getResponse;
  // throw new Error(`Network response was not ok, status code: ${response.status}`);
  // }
  console.log('response',response);
- const responseData = await response.json();
-
- 
- 
+ const responseData = await response.json(); 
  return responseData;
  }
  async function saveAssessmentMasterLog(data) {
@@ -287,16 +287,32 @@ let timer;
 //   questionIndex++;
 //   }
 
+
+function checkQuizCompletion() {
+  if (questionIndex < QuizeListResponse.length) {
+      // If there are more questions, continue to the next question
+      addQuiz();
+  } else {
+      // If all questions are completed, display an alert or perform any other action
+      alert("Congratulations! You have completed all quiz questions.");
+      // You can also redirect to another page or perform any other action here
+  }
+}
+
+
 function startTimer(condition, time) {
   if (condition === true) {
       let timeSet = time || 5; // Use the provided time or default to 5 seconds
       let settimeDiv = document.getElementById("timer-sec");
 
       arr.push(setInterval(() => {
-          settimeDiv.innerHTML = timeSet < 10 ? "0" + timeSet : timeSet;
-          timeSet--;
+        // console.log(timeSet);
+        settimeDiv.innerHTML = timeSet;
+          // settimeDiv.innerHTML = `<div id="timer"> 
+          // <div id="timer-box">x</div> 
+          // </div>`.repeat(timeSet);
 
-          if (timeSet === 0) {
+          if (timeSet == 0) {
               startTimer(false);
               let element = document.getElementById("quiz");
               element.style.display = "none";
@@ -304,11 +320,12 @@ function startTimer(condition, time) {
               optionContainer.innerHTML = "";
               addQuiz();
           }
+          timeSet--;
       }, 1000));
   } else if (condition === false) {
       questionIndex++; // Increment questionIndex before clearing intervals
       let settimeDiv = document.getElementById("timer-sec");
-      settimeDiv.innerHTML = "00";
+      settimeDiv.innerHTML = "";
 
       arr.forEach(el => {
           clearInterval(el);
@@ -320,27 +337,55 @@ function startTimer(condition, time) {
 
 
 function option(key) {
+  let param = {};
+
     // Your existing logic for handling op
+  // console.log(optionButton.innerHTML);
     if (key=="Correct_Options"){
+      param.is_right=true;
+      param.status=true;
+      param.id_question=QuizeListResponse[questionIndex].Id_Quiz;
+      param.score=QuizeListResponse[questionIndex]["Correct_point"];
+
+    let optionButton = document.getElementById(key);
+      console.log(key,"correct");
       Correct_point+=QuizeListResponse[questionIndex]["Correct_point"];
+     document.getElementById("score").innerHTML=Correct_point;
       console.log("you win",Correct_point);
+      optionButton.classList.add("correct-answer");
     }
+    
     else{
       Correct_point+=QuizeListResponse[questionIndex]["Wrong_point"];
+      let optionButton = document.getElementById(key);
       console.log("you win",Correct_point);
+      optionButton.classList.add("wrong-answer");
+
+      param.is_right=false;
+      param.status=true;
+      param.id_question=QuizeListResponse[questionIndex].Id_Quiz;
+      param.score=QuizeListResponse[questionIndex]["Correct_point"];
+      // optionButton.style.backgroundColor="red";
+
+      
 
     }
+    saveAssessmentMasterLog(param);
 
     startTimer(false);
-
-
     
 
 
-    questionIndex+1;
-    let optionContainer = document.getElementById("option-container");
-    optionContainer.innerHTML = "";
-    addQuiz();
+    
+setTimeout(()=>{
+  questionIndex+1;
+  let optionContainer = document.getElementById("option-container");
+  optionContainer.innerHTML = "";
+  checkQuizCompletion();
+  // addQuiz();
+},1000);
+
+   
 }
 
 function addQuiz() {
@@ -350,12 +395,13 @@ function addQuiz() {
       let element = document.getElementById("quiz");
       element.style.display = "flex";
       document.getElementById("ques").innerHTML=`${questionIndex+1}. ${QuizeListResponse[questionIndex].Question}`;
-    let optionContainer = document.getElementById("option-container");
-    shuffle(Object.keys(QuizeListResponse[questionIndex])).filter(el=>{
+      // document.getElementById("score").innerHTML=QuizeListResponse[questionIndex]["Correct_point"];
+      let optionContainer = document.getElementById("option-container");
+      shuffle(Object.keys(QuizeListResponse[questionIndex])).filter(el=>{
       // console.log(el,"arry");
         if (el.includes("Options")){
 
-          optionContainer.innerHTML += `<button class="option" id="option" style="border-radius:20px;" onclick="option('${el}')"
+          optionContainer.innerHTML += `<button class="option" id="${el}" style="border-radius:20px;" onclick="option('${el}')"
           <span class="label">${QuizeListResponse[questionIndex][el]}</span></button>`;          
         }
 
